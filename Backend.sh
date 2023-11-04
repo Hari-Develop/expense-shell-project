@@ -38,12 +38,12 @@ if [ ! -d /app ]; then
   check_status
 fi
 
-echo -e "\e[32m Download the application code \e[0m"
-curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>log_file
-check_status
-
 echo -e "\e[32m changing the app directory \e[0m"
 cd /app &>>log_file
+check_status
+
+echo -e "\e[32m Download the application code \e[0m"
+curl -o /tmp/backend.zip https://expense-artifacts.s3.amazonaws.com/backend.zip &>>log_file
 check_status
 
 echo -e "\e[32m unzip the content \e[0m"
