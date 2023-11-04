@@ -26,7 +26,7 @@ cp backend.service /etc/systemd/system/backend.service &>>log_file
 check_status
 
 id expense &>>log_file
-if [ $? -nq 0 ]; then
+if [ $? -ne 0 ]; then
   echo -e "\e[32m deleting the existing the user \e[0m"
   useradd expense &>>log_file
   check_status
