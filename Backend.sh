@@ -63,7 +63,7 @@ dnf install mysql -y &>>log_file
 check_status
 
 echo -e "\e[32m load the scheme \e[0m"
-mysql -h 172.31.43.125 -uroot -p${MY_SQL_PASSWORD} </app/schema/backend.sql &>>log_file
+mysql -h 172.31.43.125 -uroot -p${MY_SQL_PASSWORD} < /app/schema/backend.sql &>>log_file
 check_status
 
 echo -e "\e[32m starting the service \e[0m"
