@@ -1,3 +1,6 @@
+log_file="/tmp/expense.log"
+color="\e[32m"
+
 check_status() {
   if [ $? -eq 0 ]; then
     echo -e "\e[33m success the script \e[0m"
