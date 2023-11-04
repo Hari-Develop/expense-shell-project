@@ -1,3 +1,5 @@
+source common.sh
+
 echo -e "\e[32m installing nginx \e[0m"
 sudo dnf install nginx
 
